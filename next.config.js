@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images:{
-    domains:["logodownload.org"]
+    domains:["logodownload.org","www.pianoramix.com","i.scdn.co"]
   }
 }
 
