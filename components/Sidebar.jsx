@@ -1,15 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { RiHome5Fill, RiSearchLine } from "react-icons/ri";
+import { RiHome5Fill, RiSearchLine,RiCloseLine } from "react-icons/ri";
 import { VscLibrary } from "react-icons/vsc";
 import { CgAddR } from "react-icons/cg";
 import { BsHeartFill } from "react-icons/bs";
-const Sidebar = () => {
+
+
+const Sidebar = (props) => {
+  const {showSidebar, setShowSidebar} = props;
   return (
-    <div className="bg-black fixed top-0 w-64 left-0 h-full p-4 flex flex-col justify-between">
+    <div className={`bg-black fixed top-0 w-64 left-0 h-full p-4 flex flex-col justify-between ${showSidebar ? "left-0":"-left-full"} md:left-0 transition-all duration-300 z-50`}>
+      <div className="absolute top-4 right-4 md:hidden p-2">
+        <RiCloseLine className="text-xl" onClick={()=>setShowSidebar(false)}/>
+      </div>
       <div>
-        <div className="mt-3 mb-8">
+        <div className="mt-3 mb-8 hover:cursor-pointer">
           <Image
             src="https://logodownload.org/wp-content/uploads/2016/09/Spotify-logo.png"
             alt="logo spotify"
