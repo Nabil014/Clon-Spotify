@@ -53,7 +53,7 @@ const Sidebar = (props) => {
           </ul>
         </nav>
       </div>
-      <div >
+      <div>
         <nav className="grid grid-cols-2 gap-y-4">
           <Link href="#">
             <ul className="text-[0.65rem]">
